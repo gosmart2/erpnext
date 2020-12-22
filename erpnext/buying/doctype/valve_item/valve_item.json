@@ -1,0 +1,171 @@
+{
+ "autoname": "VAL-LIST-.#####",
+ "creation": "2020-12-17 11:07:47.007251",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_description",
+  "body",
+  "disc",
+  "seal",
+  "bonnet",
+  "float",
+  "seat",
+  "ball",
+  "spring",
+  "wedge",
+  "strainer",
+  "diaphragm",
+  "design_type",
+  "constd",
+  "pressure_rating",
+  "dn",
+  "quality",
+  "units",
+  "tag_no",
+  "location"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_description",
+   "fieldtype": "Select",
+   "label": "Item Description",
+   "options": "-- Select --\nButterfly Valve\nCheck Valve\nBall Valve\nGate Valve\nElectro Valve\nAir vent Valve\nY-Strainer"
+  },
+  {
+   "fieldname": "body",
+   "fieldtype": "Select",
+   "label": "Body",
+   "options": "-- Select --\nDuctile Iron\nEpoxy Coated Ductile Iron\nSS304\nPVC-U\nC-PVC\nSS316/SS304\nSS304/Brass"
+  },
+  {
+   "fieldname": "seal",
+   "fieldtype": "Select",
+   "label": "Contact Seal",
+   "options": "-- Select --\nHeat EPDM\nPTFE\nFKM"
+  },
+  {
+   "fieldname": "design_type",
+   "fieldtype": "Select",
+   "label": "Design type",
+   "options": "-- Select --\nWafer Type with Smooth Ears\nBall Check valve\nSpring type-DISC Axiaal Check Valve\nWafer type\nBall Check valve with Dual Lock provision\nFull Bore,2 Piece design\nManual,with Dual lock provision\nBall Type\nResilient Seat,Short Pattern,Hand Wheel operated\nNormally Closed\nThreaded end\nY-TYPE, STRAINER MOC HAS TO WITHSTAND 98% CONCENTRATED H2SO4"
+  },
+  {
+   "fieldname": "constd",
+   "fieldtype": "Select",
+   "label": "Connection type & Standard",
+   "options": "-- Select --\nIn Between Flanged End & DIN\nFlanged End & DIN\nBSP Threaded End (Female Thread)\nSolvent Type"
+  },
+  {
+   "fieldname": "pressure_rating",
+   "fieldtype": "Select",
+   "label": "Pressure rating",
+   "options": "-- Select --\nPN6\nPN10\nPN16"
+  },
+  {
+   "fieldname": "dn",
+   "fieldtype": "Select",
+   "label": "Dn-(Inch)",
+   "options": "-- Select --\nDN8-(1/4)\nDN15-(1/2)\nDN20-(3/4)\nDN25-(1)\nDN32-(1 1/4)\nDN40-(1 1/2)\nDN50-(2)\nDN80-(3)\nDN100-(4)\nDN150-(6)\nDN200-(8)"
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Data",
+   "label": "Quality"
+  },
+  {
+   "fieldname": "units",
+   "fieldtype": "Select",
+   "label": "Units",
+   "options": "Nos"
+  },
+  {
+   "fieldname": "tag_no",
+   "fieldtype": "Data",
+   "label": "Tag No"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "disc",
+   "fieldtype": "Select",
+   "label": "Disc",
+   "options": "-- Select --\nSS304/SS 316\nPVC-U"
+  },
+  {
+   "fieldname": "bonnet",
+   "fieldtype": "Select",
+   "label": "Bonnet",
+   "options": "-- Select--\nEpoxy Coated Ductile Iron\nBrass"
+  },
+  {
+   "fieldname": "float",
+   "fieldtype": "Select",
+   "label": "Float",
+   "options": "-- Select --\nSS316/SS304"
+  },
+  {
+   "fieldname": "seat",
+   "fieldtype": "Select",
+   "label": "Seat",
+   "options": "-- Select--\nEPDM Seat & O-RINGS\nFKM (Standard size O-Ring)"
+  },
+  {
+   "fieldname": "ball",
+   "fieldtype": "Select",
+   "label": "Ball",
+   "options": "-- Select --\nNitrile Coated\nSS316/SS304"
+  },
+  {
+   "fieldname": "spring",
+   "fieldtype": "Select",
+   "label": "Spring",
+   "options": "-- Select --\nSpring SS316"
+  },
+  {
+   "fieldname": "wedge",
+   "fieldtype": "Select",
+   "label": "Wedge",
+   "options": "-- Select --\nEPDM Coated Ductile Iron"
+  },
+  {
+   "fieldname": "strainer",
+   "fieldtype": "Select",
+   "label": "Strainer",
+   "options": "-- Select --\nC-PVC"
+  },
+  {
+   "fieldname": "diaphragm",
+   "fieldtype": "Select",
+   "label": "Diaphragm",
+   "options": "-- Select --\nFPM"
+  }
+ ],
+ "modified": "2020-12-23 12:53:19.884034",
+ "modified_by": "gokul@wtt.com",
+ "module": "Buying",
+ "name": "valve item",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

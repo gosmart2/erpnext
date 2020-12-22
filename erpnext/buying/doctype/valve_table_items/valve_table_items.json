@@ -1,0 +1,51 @@
+{
+ "creation": "2020-12-22 15:14:04.533093",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "valve_name",
+  "body",
+  "disc",
+  "contact_seal"
+ ],
+ "fields": [
+  {
+   "fieldname": "disc",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Disc"
+  },
+  {
+   "fieldname": "contact_seal",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Contact Seal"
+  },
+  {
+   "fieldname": "valve_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Valve Name",
+   "options": "Valve",
+   "reqd": 1
+  },
+  {
+   "fieldname": "body",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Body"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-12-22 15:47:08.585994",
+ "modified_by": "Administrator",
+ "module": "Buying",
+ "name": "Valve Table Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,22 @@
+{% block script %}
+<script>{% include "templates/includes/Compare.js" %}</script>
+{% endblock %}
+<style>
+h2
+{
+color:blue;
+}
+</style>
+{% extends "templates/web.html" %}
+{% block header_actions %}
+<input type="submit" id="btn-login" value="Get Items">
+{% endblock %}
+
+{% block page_content %}
+<h2>Quotation Comparison</h2><br>
+<span id="myText"></span>
+<br>
+<span id="val"></span><br><br>
+<span id="val2"></span><br><br>
+<span id="val3"></span>
+{% endblock %}

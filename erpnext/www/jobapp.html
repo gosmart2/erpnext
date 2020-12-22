@@ -1,0 +1,1325 @@
+         <SCRIPT language="javascript">  
+function addRo(tableID) {  
+        var table = document.getElementById(tableID);  
+        var rowCount = table.rows.length;  
+        var row = table.insertRow(rowCount);  
+          
+        var cell1 = row.insertCell(0);  
+	cell1.style="border-collapse:collapse; border:1px solid black;";         
+	var element1 = document.createElement("input");  
+        element1.type = "button";  
+        var btnName = "butto" + (rowCount + 1);  
+        element1.name = btnName;  
+        element1.style="width:100%; border-collapse:collapse; border:1px solid black;";
+        element1.setAttribute('value', 'Delete'); 
+        element1.onclick = function () { removeRo(btnName); }  
+        cell1.appendChild(element1);  
+           
+        var cell2 = row.insertCell(1); 
+	cell2.style="border-collapse:collapse; border:1px solid black;";  
+        var element2 = document.createElement("input");  
+        element2.type = "text";
+        element2.placeholder="MM/YYYY";  
+        element2.style="width:100%; border-collapse:collapse; border:1px solid black;";
+	element2.classList.add("int2");
+        cell2.appendChild(element2);  
+       
+        var cell3 = row.insertCell(2); 
+	cell3.style="border-collapse:collapse; border:1px solid black;";  
+        var element3 = document.createElement("input");  
+        element3.type = "text"; 
+ 	element3.placeholder="MM/YYYY";  
+ 	element3.style="width:100%;";
+	element3.classList.add("int2");
+        cell3.appendChild(element3);  
+        
+        var cell4 = row.insertCell(3);
+	cell4.style="border-collapse:collapse; border:1px solid black;";  
+        var element4 = document.createElement("input");  
+        element4.type = "text";
+        element4.placeholder="Nature of Training";           
+	element4.style="width:100%;";        
+	element4.classList.add("int2");	
+	cell4.appendChild(element4);
+
+	var cell5 = row.insertCell(4);
+	cell5.style="border-collapse:collapse; border:1px solid black;";  
+        var element5 = document.createElement("input");  
+        element5.type = "text";
+	element5.placeholder="Institute/Organization";  
+ 	element5.style="width:100%;";  
+	element5.classList.add("int2");       
+        cell5.appendChild(element5);
+    }  
+    function removeRo(btnName) {  
+        try {  
+            var table = document.getElementById('dataTab');  
+            var rowCount = table.rows.length;  
+            for (var i = 0; i < rowCount; i++) {  
+                var row = table.rows[i];  
+                var rowObj = row.cells[0].childNodes[0];  
+                if (rowObj.name == btnName) {  
+                    table.deleteRow(i);  
+                    rowCount--;  
+                }  
+            }  
+        }  
+        catch (e) {  
+            alert(e);  
+        }  
+    }  
+
+
+
+
+
+     function addRow(tableID) {  
+        var table = document.getElementById(tableID);  
+        var rowCount = table.rows.length;  
+        var row = table.insertRow(rowCount);  
+          
+        var cell1 = row.insertCell(0);  
+	cell1.style="border-collapse:collapse; border:1px solid black;";         
+	var element1 = document.createElement("input");  
+        element1.type = "button";  
+        var btnName = "button" + (rowCount + 1);  
+        element1.name = btnName;  
+        element1.style="width:100%; border-collapse:collapse; border:1px solid black;";
+        element1.setAttribute('value', 'Delete'); // or element1.value = "button";  
+        element1.onclick = function () { removeRow(btnName); }  
+        cell1.appendChild(element1);  
+           
+        var cell2 = row.insertCell(1); 
+	cell2.style="border-collapse:collapse; border:1px solid black;";  
+        var element2 = document.createElement("input");  
+        element2.type = "text";
+        element2.placeholder="MM/YYYY";  
+        element2.style="width:100%; border-collapse:collapse; border:1px solid black;";
+	element2.classList.add("int2");
+        cell2.appendChild(element2);  
+       
+        var cell3 = row.insertCell(2); 
+	cell3.style="border-collapse:collapse; border:1px solid black;";  
+        var element3 = document.createElement("input");  
+        element3.type = "text"; 
+ 	element3.placeholder="MM/YYYY";  
+ 	element3.style="width:100%;";
+	element3.classList.add("int2");
+        cell3.appendChild(element3);  
+        
+        var cell4 = row.insertCell(3);
+	cell4.style="border-collapse:collapse; border:1px solid black;";  
+        var element4 = document.createElement("input");  
+        element4.type = "text";
+        element4.placeholder="Nature of Training";           
+	element4.style="width:100%;";
+	element4.classList.add("int2");        
+	cell4.appendChild(element4);
+
+	var cell5 = row.insertCell(4);
+	cell5.style="border-collapse:collapse; border:1px solid black;";  
+        var element5 = document.createElement("input");  
+        element5.type = "text";
+	element5.placeholder="Institute/Organization";  
+ 	element5.style="width:100%;";
+	element5.classList.add("int2");         
+        cell5.appendChild(element5);
+    }  
+    function removeRow(btnName) {  
+        try {  
+            var table = document.getElementById('dataTable');  
+            var rowCount = table.rows.length;  
+            for (var i = 0; i < rowCount; i++) {  
+                var row = table.rows[i];  
+                var rowObj = row.cells[0].childNodes[0];  
+                if (rowObj.name == btnName) {  
+                    table.deleteRow(i);  
+                    rowCount--;  
+                }  
+            }  
+        }  
+        catch (e) {  
+            alert(e);  
+        }  
+    }  
+
+
+
+
+ function addRow1(tableID) {  
+        var table = document.getElementById(tableID);  
+        var rowCount = table.rows.length;  
+        var row = table.insertRow(rowCount);  
+        //Column 1  
+        var cell1 = row.insertCell(0); 
+	cell1.style="border-collapse:collapse; border:1px solid black;"; 
+        var element1 = document.createElement("input");  
+        element1.type = "button";  
+        var btnName = "button" + (rowCount + 1);  
+        element1.name = btnName;  
+        element1.style="width:100%;";
+        element1.setAttribute('value', 'Delete');  
+        element1.onclick = function () { removeRow1(btnName); }  
+        cell1.appendChild(element1);  
+        //Column 2    
+        var cell2 = row.insertCell(1);  
+	cell2.style="border-collapse:collapse; border:1px solid black;";        
+	var element2 = document.createElement("input");  
+        element2.type = "text";
+        element2.placeholder="Languages";  
+        element2.style="width:100%;";
+	element2.classList.add("int2");
+        cell2.appendChild(element2);  
+        //Column 3  
+        var cell3 = row.insertCell(2);
+        cell3.style="border-collapse:collapse; border:1px solid black;";
+        var element3 = document.createElement("input");  
+        element3.type = "checkbox";   
+ 	element3.style="width:100%; border-collapse:collapse; border:1px solid black;";
+	element3.classList.add("int2");
+        cell3.appendChild(element3);  
+        
+        var cell4 = row.insertCell(3);  
+ 	cell4.style="border-collapse:collapse; border:1px solid black;";
+        var element4 = document.createElement("input");  
+        element4.type = "checkbox";  
+	element4.style="width:100%; border-collapse:collapse; border:1px solid black;";  
+	element4.classList.add("int2");      
+	cell4.appendChild(element4);
+
+	var cell5 = row.insertCell(4);  
+ 	cell5.style="border-collapse:collapse; border:1px solid black;";        
+	var element5 = document.createElement("input");  
+        element5.type = "checkbox"; 
+ 	element5.style="width:100%;"; 
+	element5.classList.add("int2");        
+        cell5.appendChild(element5);
+    }  
+    function removeRow1(btnName) {  
+        try {  
+            var table = document.getElementById('dataTable1');  
+            var rowCount = table.rows.length;  
+            for (var i = 0; i < rowCount; i++) {  
+                var row = table.rows[i];  
+                var rowObj = row.cells[0].childNodes[0];  
+                if (rowObj.name == btnName) {  
+                    table.deleteRow(i);  
+                    rowCount--;  
+                }  
+            }  
+        }  
+        catch (e) {  
+            alert(e);  
+        }  
+    }  
+
+
+ function addRow2(tableID) {  
+        var table = document.getElementById(tableID);  
+        var rowCount = table.rows.length;  
+        var row = table.insertRow(rowCount);  
+          
+        var cell1 = row.insertCell(0);  
+	cell1.style="border-collapse:collapse; border:1px solid black;";         
+	var element1 = document.createElement("input");  
+        element1.type = "button";  
+        var btnName = "button" + (rowCount + 1);  
+        element1.name = btnName;  
+        element1.style="width:100%;";
+        element1.setAttribute('value', 'Delete');   
+        element1.onclick = function () { removeRow2(btnName); } 
+        cell1.appendChild(element1);  
+           
+        var cell2 = row.insertCell(1); 
+	cell2.style="border-collapse:collapse; border:1px solid black;";  
+        var element2 = document.createElement("input");  
+        element2.type = "text";
+        element2.placeholder="MM/YYYY";  
+        element2.style="width:100%;";
+	element2.classList.add("int2");
+        cell2.appendChild(element2);  
+       
+        var cell3 = row.insertCell(2); 
+	cell3.style="border-collapse:collapse; border:1px solid black;";  
+        var element3 = document.createElement("input");  
+        element3.type = "text"; 
+ 	element3.placeholder="MM/YYYY"; 
+	element3.classList.add("int2"); 
+ 	element3.style="width:100%;";
+        cell3.appendChild(element3);  
+        
+        var cell4 = row.insertCell(3);
+	cell4.style="border-collapse:collapse; border:1px solid black;";  
+        var element4 = document.createElement("input");  
+        element4.type = "text";
+        element4.placeholder="Name of the company";           
+	element4.style="width:100%;";   
+	element4.classList.add("int2");     
+	cell4.appendChild(element4);
+
+	var cell5 = row.insertCell(4);
+	cell5.style="border-collapse:collapse; border:1px solid black;";  
+        var element5 = document.createElement("input");  
+        element5.type = "text";
+	element5.placeholder="Designation";  
+ 	element5.style="width:100%;";
+	element5.classList.add("int2");         
+        cell5.appendChild(element5);
+
+	var cell6 = row.insertCell(5);
+	cell6.style="border-collapse:collapse; border:1px solid black;";  
+        var element6 = document.createElement("input");  
+        element6.type = "text";
+	element6.placeholder="Department";
+	element6.classList.add("int2");  
+ 	element6.style="width:100%;";         
+        cell6.appendChild(element6);
+
+	var cell7 = row.insertCell(6);
+	cell7.style="border-collapse:collapse; border:1px solid black;";  
+        var element7 = document.createElement("input");  
+        element7.type = "text";
+	element7.placeholder="Take home";  
+ 	element7.style="width:100%;";  
+	element7.classList.add("int2");       
+        cell7.appendChild(element7);
+
+	var cell8 = row.insertCell(7);
+	cell8.style="border-collapse:collapse; border:1px solid black;";  
+        var element8 = document.createElement("input");  
+        element8.type = "text";
+	element8.placeholder="Gross";  
+ 	element8.style="width:100%;";
+	element8.classList.add("int2");         
+        cell8.appendChild(element8);
+
+	var cell9 = row.insertCell(8);
+	cell9.style="border-collapse:collapse; border:1px solid black;";  
+        var element9 = document.createElement("input");  
+        element9.type = "text";
+	element9.placeholder="CTC";  
+ 	element9.style="width:100%;"; 
+	element9.classList.add("int2");        
+        cell9.appendChild(element9);
+    }  
+    function removeRow2(btnName) {  
+        try {  
+            var table = document.getElementById('dataTable2');  
+            var rowCount = table.rows.length;  
+            for (var i = 0; i < rowCount; i++) {  
+                var row = table.rows[i];  
+                var rowObj = row.cells[0].childNodes[0];  
+                if (rowObj.name == btnName) {  
+                    table.deleteRow(i);  
+                    rowCount--;  
+                }  
+            }  
+        }  
+        catch (e) {  
+            alert(e);  
+        }  
+    }   
+</SCRIPT>  
+
+<script type="text/javascript">
+    function copyValue(Chk) {
+        if (Chk.checked) {
+            var street = document.getElementById('street').value;
+            document.getElementById('street1').value = street;
+
+	    var village = document.getElementById('village').value;
+            document.getElementById('village1').value = village;
+
+	    var country = document.getElementById('countySel').value;
+            document.getElementById('country1').value = country;
+
+	    var state = document.getElementById('stateSel').value;
+            document.getElementById('state1').value = state;
+
+	    var district = document.getElementById('districtSel').value;
+            document.getElementById('district1').value = district;
+		
+	    var pincode = document.getElementById('pincode').value;
+            document.getElementById('pincode1').value = pincode;
+        }
+        else {
+            document.getElementById('street1').value = "";
+	    document.getElementById('country1').value = "";
+	    document.getElementById('state1').value = "";
+            document.getElementById('district1').value = "";
+	    document.getElementById('pincode1').value = "";
+        }
+    }
+</script>
+
+<script>
+function go(str) {
+if(str=="single")
+{
+document.getElementById('demo').style.visibility = "hidden";
+}
+else
+{
+document.getElementById('demo').style.visibility = "visible";
+}
+}
+</script>
+
+
+<script>
+var stateObject = {
+"India": { "Delhi": ["new Delhi", "North Delhi"],
+"Kerala": ["Thiruvananthapuram", "Palakkad"],
+"Goa": ["North Goa", "South Goa"],
+},
+"Australia": {
+"South Australia": ["Dunstan", "Mitchell"],
+"Victoria": ["Altona", "Euroa"]
+}, "Canada": {
+"Alberta": ["Acadia", "Bighorn"],
+"Columbia": ["Washington", ""]
+},
+}
+window.onload = function () {
+var countySel = document.getElementById("countySel"),
+stateSel = document.getElementById("stateSel"),
+districtSel = document.getElementById("districtSel");
+for (var country in stateObject) {
+countySel.options[countySel.options.length] = new Option(country, country);
+}
+countySel.onchange = function () {
+stateSel.length = 1; // remove all options bar first
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done 
+for (var state in stateObject[this.value]) {
+stateSel.options[stateSel.options.length] = new Option(state, state);
+}
+}
+countySel.onchange(); // reset in case page is reloaded
+stateSel.onchange = function () {
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done 
+var district = stateObject[countySel.value][this.value];
+for (var i = 0; i < district.length; i++) {
+districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);
+}
+}
+}
+</script>
+
+<script>
+function calculate_age(dob,name) { 
+    var d = new Date(dob);
+    var n = d.getFullYear();
+    var today = new Date();
+    var yyyy = today.getFullYear();
+    var dif=yyyy-n;
+   if(name=="fname")
+   {
+    document.getElementById("fage").value = dif;
+   }
+  else if(name=="mname")
+  {
+  document.getElementById("mage").value = dif;
+  }
+  else if(name=="sname")
+  {
+  document.getElementById("sage").value = dif;
+  }
+  else if(name=="c1name")
+  {
+  document.getElementById("c1age").value = dif;
+  }
+  else if(name=="c2name")
+  {
+  document.getElementById("c2age").value = dif;
+  }
+  else if(name=="c3name")
+  {
+  document.getElementById("c3age").value = dif;
+  }
+  else if(name=="s1name")
+  {
+  document.getElementById("s1age").value = dif;
+  }
+  else if(name=="s2name")
+  {
+  document.getElementById("s2age").value = dif;
+  }
+  else if(name=="ddob")
+  {
+  document.getElementById("dage").value = dif;
+  }
+}
+</script>
+
+<style>
+.tab2
+{
+border-collapse:collapse;
+ border:1px solid black;
+ table-layout: fixed;
+width: 800px;
+font-size:14px;
+}
+.tab3
+{
+ border-collapse:collapse;
+ border:1px solid black;
+table-layout: fixed;
+ width: 800px;
+font-size:14px;
+}
+.tabint
+{
+ border-collapse:collapse;
+ border:1px solid black;
+ table-layout: fixed;
+ width: 800px;
+}
+.tab4
+{
+ border-collapse:collapse;
+ border:1px solid black;
+ table-layout: fixed;
+ width: 800px;
+}
+th
+{
+ border-collapse:collapse;
+ border:1px solid black;
+}
+.tab5
+{
+ border-collapse:collapse;
+ border:1px solid black;
+ table-layout: fixed;
+ width: 800px;
+}
+
+.tab6
+{
+border-collapse:collapse;
+ border:1px solid black;
+ table-layout: fixed;
+width: 800px;
+font-size:12px;
+}
+.tab7
+{
+border-collapse:collapse;
+ border:1px solid black;
+ table-layout: fixed;
+width: 800px;
+}
+.tab8
+{
+border-collapse:collapse;
+ border:1px solid black;
+ table-layout: fixed;
+width: 800px;
+}
+.tab9
+{
+border-collapse:collapse;
+ border:1px solid black;
+ table-layout: fixed;
+width: 800px;
+}
+.tab10
+{
+border-collapse:collapse;
+ border:1px solid black;
+ table-layout: fixed;
+width: 800px;
+}
+.img
+{
+width:800px;
+}
+.pic
+{
+position:absolute;
+top:60px;
+right:-40px;
+}
+
+         .btn-grad {background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%)}
+         .btn-grad {
+            margin: 5px;
+            padding: 15px 20px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 100% auto;
+            color: black;
+	    font-weight: bold;
+	    font-family: "times new roman";
+	    font-size: 15px;            
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center;
+            color: white;
+          }
+         
+
+         .sub 
+		{
+	background-image: linear-gradient(to right, #f857a6 0%, #ff5858  51%, #f857a6  100%)}
+         .sub {
+            margin: 10px;
+            padding: 5px 10px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 100% auto;
+            color: black;   
+	    font-weight: bold;
+	    font-family: "times new roman";         
+            border-radius: 10px;
+            display: block;
+          }
+         .int
+	{
+	border-radius: 5px;
+	border: none;
+	font-family: "times new roman"; 
+	padding: 5px 10px;
+	background-color: #F75479;
+        color: white;
+	}
+         .int::placeholder
+	{
+	color: white;
+	}
+
+ 	.int2
+	{
+	border-radius: 5px;
+	border-color: brown;
+	border-width: 2px;
+	font-family: "times new roman"; 
+	padding: 3px 5px;
+	}
+
+.inputfile {
+	opacity: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+.inputfile + label {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background-color: #F75479;
+    position: absolute;
+    top: 400px;
+    right: 30px;
+    padding: 2px 2px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: lightgreen;
+}
+.inputfile + label {
+	cursor: pointer;
+}
+</style>
+<html>
+<body>
+<center>
+<img src="logo1.jpg" class="img">
+</center>
+<form action="" method="POST">
+<input type="file" name="file" id="file" class="inputfile"/>
+<label for="file">Choose a photo</label>
+<center>
+<table cellpadding="10" cellspacing="10">
+
+<tr>
+<td>APPLICATION FOR THE POST</td>
+<td>:</td>
+<td><select name="application" class="int" required>
+    <option value="">--Select--</option>
+    <option value="Graduate Engineer Trainee">GRADUATE ENGINEER TRAINEE</option>
+    <option value="Lab Chemist">LAB CHEMIST</option>
+    <option value="Ro Operator">RO OPERATOR</option>
+    <option value="Stp Operator">STP OPERATOR</option>
+    <option value="Etp Operator">ETP OPERATOR</option>
+    <option value="Mechanical Junior Maintenance">MECHANICAL JUNIOR MAINTENANCE</option>
+    <option value="Mechanical Senior Maintenance">MECHANICAL SENIOR MAINTENANCE</option>
+    <option value="Electrical Junior Maintenance">ELECTRICAL JUNIOR MAINTENANCE</option>
+    <option value="Electrical Senior Maintenance">ELECTRICAL SENIOR MAINTENANCE</option>
+    <option value="Fitter">FITTER</option>
+    <option value="Welder">WELDER</option>
+    <option value="Shift In Charge">SHIFT IN CHARGE</option>
+    <option value="Project Engineer">PROJECT ENGINEER</option>
+    <option value="Mechanical Design Engineer">MECHANICAL DESIGN ENGINEER</option>
+    <option value="Electrical Design Engineer">ELECTRICAL DESIGN ENGINEER</option>
+    <option value="O&M In Charge">O&M IN CHARGE</option>
+    <option value="Sales Executive">SALES EXECUTIVE</option>
+    <option value="Telemarketing Executive">TELEMARKETING EXECUTIVE</option>
+    <option value="Software Developer">SOFTWARE DEVELOPER</option>
+    <option value="Others">OTHERS</option>
+  </select></td>
+</tr>
+
+<tr>
+<td>NAME (IN BLOCK LETTERS)</td>
+<td>:</td>
+<td><input type="text" name="n1" placeholder="Name" class="int"></td>
+</tr>
+
+<tr>
+<td>FATHER NAME</td>
+<td>:</td>
+<td><input type="text" name="f1" placeholder="Father's Name" class="int"></td>
+</tr>
+
+<tr>
+<td>OCCUPATION</td>
+<td>:</td>
+<td><input type="text" name="f1" placeholder="Occupation" class="int"></td>
+</tr>
+
+<tr>
+<td>DATE OF BIRTH</td>
+<input type="hidden" value="ddob" id="dd">
+<td>:</td>
+<td><input type="date" id="adate" class="int" onchange="calculate_age(this.value,dd.value)"></td>
+</tr>
+
+<tr>
+<td>AGE</td>
+<td>:</td>
+<td><input type="text" id="dage" class="int" placeholder="Age"></td>
+</tr>
+
+<tr>
+<td>SEX</td>
+<td>:</td>
+<td><input type="radio" name="gender" value="Male"><label for="male">Male</label>
+<input type="radio" name="gender" value="Female"><label for="female">Female</label></td>
+</tr>
+
+<tr>
+<td>BLOOD GROUP</td>
+<td>:</td>
+<td><input type="text" name="bg" placeholder="Blood Group" class="int"></td>
+</tr>
+
+<tr>
+<td>RELIGION</td>
+<td>:</td>
+<td><select name="religion" class="int">
+    <option value="">--Select--</option>
+    <option value="hindu">HINDU</option>
+    <option value="muslim">MUSLIM</option>
+    <option value="christian">CHRISHTIAN</option>
+    <option value="others">OTHERS</option>
+  </select></td>
+</tr>
+
+<tr>
+<td>COMMUNITY</td>
+<td>:</td>
+<td><select name="community" class="int">
+    <option value="">--Select--</option>
+    <option value="bc">	BC</option>
+    <option value="mbc">MBC</option>
+    <option value="sc">SC</option>
+    <option value="st">ST</option>
+    <option value="bcm">BCM</option>
+    <option value="others">OTHERS</option>
+  </select></td>
+</tr>
+
+<tr>
+<td>MARITAL STATUS</td>
+<td>:</td>
+<td><input type="radio" name="marital" id="marital" value="single" onclick="go(this.value)"><label for="single">SINGLE</label>
+<input type="radio" name="marital" id="marital" value="married" onclick="go(this.value)"><label for="married">MARRIED</label></td>
+</tr>
+
+<tr  id="demo" style="visibility:hidden;">
+<td>SPOUSE NAME</td>
+<td>:</td>
+<td><input type="text" name="spouse" placeholder="Spouse name" class="int"></td>
+</tr>
+
+<tr>
+<td>PLACE OF BIRTH</td>
+<td>:</td>
+<td><input type="text" name="place" placeholder="Place of Birth" class="int"></td>
+</tr>
+
+<tr>
+<td>PRESENT ADDRESS</td>
+<td>:</td>
+<td><input type="text" id="street" placeholder="STREET" class="int"></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td><input type="text" id="village" placeholder="VILLAGE/CITY" class="int"></td>
+</tr>
+
+<tr>
+<td>COUNTRY</td>
+<td>:</td>
+<td><select name="state" id="countySel" size="1" class="int">
+<option selected="selected">Select Country</option>
+</select></td>
+</tr>
+
+<tr>
+<td>STATE</td>
+<td>:</td>
+<td><select name="countrya" id="stateSel" size="1" class="int">
+<option selected="selected">Please select Country first</option>
+</select></td>
+</tr>
+
+<tr>
+<td>DISTRICT</td>
+<td>:</td>
+<td><select name="district" id="districtSel" size="1" class="int">
+<option selected="selected">Please select State first</option>
+</select></td>
+
+<tr>
+<td>PINCODE</td>
+<td>:</td>
+<td><input type="text" id="pincode" placeholder="e.g 600 002" class="int"></td>
+</tr>
+
+<tr>
+<td>PERMANENT ADDRESS<br><br>Same as present address: <input type="checkbox" id="check" onclick="copyValue(this)"></td>
+<td>:</td>
+<td><input type="text" id="street1" placeholder="STREET" class="int"></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td><input type="text" id="village1" placeholder="VILLAGE/CITY" class="int"></td>
+</tr>
+
+<tr>
+<td>COUNTRY</td>
+<td>:</td>
+<td><input type="text" id="country1" placeholder="COUNTRY" class="int"></td>
+</tr>
+
+<tr>
+<td>STATE</td>
+<td>:</td>
+<td><input type="text" id="state1" placeholder="STATE" class="int"></td>
+</tr>
+
+<tr>
+<td>DISTRICT</td>
+<td>:</td>
+<td><input type="text" id="district1" placeholder="DISTRICT" class="int"></td>
+<tr>
+
+<tr>
+<td>PINCODE</td>
+<td>:</td>
+<td><input type="text" id="pincode1" placeholder="e.g 600 002" class="int"></td>
+</	tr>
+</table>
+
+<table class="tab2" cellpadding="5" cellspacing="5">
+<tr>
+<th colspan="7" align="left">FAMILY BACKGROUND :</td>
+</tr>
+<tr>
+<th>RELATIONSHIP</th>
+<th>NAME</th>
+<th>AGE</th>
+<th>DOB</th>
+<th>DEPENDS YOU<br> (YES/NO)?</th>
+<th>EDUCATION</th>
+<th>OCCUPATION</th>
+</tr>
+
+<tr><td class="tab2">FATHER</td>
+<input type="hidden" id="fn1" value="fname">
+<td class="tab2"><input type="text" name="fn" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" id="fage" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="date" name="fdob" style="width:100%;" class="int2" onchange="calculate_age(this.value,fn1.value)"></td>
+<td class="tab2"><select name="fdep" style="width:100%;" class="int2">
+<option value="">--Select--</option>
+<option value="yes">YES</option>
+<option value="no">NO</option>
+</select></td>
+<td class="tab2"><input type="text" name="fedu" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" name="focc" style="width:100%;" class="int2"></td>
+</tr>
+
+<tr><td class="tab2">MOTHER</td>
+<input type="hidden" id="mn1" value="mname">
+<td class="tab2"><input type="text" id="mn" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" id="mage" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="date" name="mdob" style="width:100%;" class="int2" onchange="calculate_age(this.value,mn1.value)"></td>
+<td class="tab2"><select name="mdep" style="width:100%;" class="int2">
+<option value="">--Select--</option>
+<option value="yes">YES</option>
+<option value="no">NO</option>
+</select></td>
+<td class="tab2"><input type="text" name="medu" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" name="mocc" style="width:100%;" class="int2"></td>
+</tr>
+
+<tr><td class="tab2">SPOUSE (IF MARRIED)</td>
+<input type="hidden" id="sn1" value="sname">
+<td class="tab2"><input type="text" name="sn" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" id="sage" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="date" name="sdob" style="width:100%;" class="int2" onchange="calculate_age(this.value,sn1.value)"></td>
+<td class="tab2"><select name="sdep" style="width:100%;" class="int2">
+<option value="">--Select--</option>
+<option value="yes">YES</option>
+<option value="no">NO</option>
+</select></td>
+<td class="tab2"><input type="text" name="sedu" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" name="socc" style="width:100%;" class="int2"></td>
+</tr>
+
+<tr><td class="tab2">CHILD 1</td>
+<input type="hidden" id="c1n1" value="c1name">
+<td class="tab2"><input type="text" name="c1n" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" id="c1age" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="date" name="c1dob" style="width:100%;" class="int2" onchange="calculate_age(this.value,c1n1.value)"></td>
+<td class="tab2"><select name="c1dep" style="width:100%;" class="int2">
+<option value="">--Select--</option>
+<option  value="yes">YES</option>
+<option value="no">NO</option>
+</select></td>
+<td class="tab2"><input type="text" name="c1edu" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" name="c1occ" style="width:100%;" class="int2"></td>
+</tr>
+
+<tr><td class="tab2">CHILD 2</td>
+<input type="hidden" id="c2n1" value="c2name">
+<td class="tab2"><input type="text" name="c2n" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" id="c2age" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="date" name="c2dob" style="width:100%;" class="int2" onchange="calculate_age(this.value,c2n1.value)"></td>
+<td class="tab2"><select name="c2dep" style="width:100%;" class="int2">
+<option value="">--Select--</option>
+<option value="yes">YES</option>
+<option value="no">NO</option>
+</select></td>
+<td class="tab2"><input type="text" name="c2edu" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" name="c2occ" style="width:100%;" class="int2"></td>
+</tr>
+
+<tr><td class="tab2">CHILD 3</td>
+<input type="hidden" id="c3n1" value="c3name">
+<td class="tab2"><input type="text" name="c3n" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" id="c3age" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="date" name="c3dob" style="width:100%;" class="int2" onchange="calculate_age(this.value,c3n1.value)"></td>
+<td class="tab2"><select name="c3dep" style="width:100%;" class="int2">
+<option value="">--Select--</option>
+<option value="yes">YES</option>
+<option value="no">NO</option>
+</select></td>
+<td class="tab2"><input type="text" name="c3edu" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" name="c3occ" style="width:100%;" class="int2"></td>
+</tr>
+
+<tr>
+<td class="tab2">SIBLING 1</td>
+<input type="hidden" id="s1n1" value="s1name">
+<td class="tab2"><input type="text" name="s1n" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" id="s1age" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="date" name="s1dob" style="width:100%;" class="int2" onchange="calculate_age(this.value,s1n1.value)"></td>
+<td class="tab2"><select name="s1dep" style="width:100%;" class="int2">
+<option value="">--Select--</option>
+<option value="yes">YES</option>
+<option value="no">NO</option>
+</select></td>
+<td class="tab2"><input type="text" name="s1edu" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" name="s1occ" style="width:100%;" class="int2"></td>
+</tr>
+
+<tr>
+<td class="tab2">SIBLING 2</td>
+<input type="hidden" id="s2n1" value="s2name">
+<td class="tab2"><input type="text" name="s2n" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" id="s2age" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="date" name="s2dob" style="width:100%;" class="int2" onchange="calculate_age(this.value,s2n1.value)"></td>
+<td class="tab2"><select name="s2dep" style="width:100%;" class="int2">
+<option value="">--Select--</option>
+<option value="yes">YES</option>
+<option value="no">NO</option>
+</select></td>
+<td class="tab2"><input type="text" name="s2edu" style="width:100%;" class="int2"></td>
+<td class="tab2"><input type="text" name="s2occ" style="width:100%;" class="int2"></td>
+</tr>
+</table>
+<br>
+<br>
+<table class="tab3" cellpadding="5" cellspacing="5">
+<tr>
+<th align="left" colspan="8">EDUCATION :</th>
+</tr>
+
+<tr>
+<th colspan="2">MONTH & YEAR</th>
+<th rowspan="2">COURSE</th>
+<th rowspan="2">BOARD</th>
+<th rowspan="2">SCHOOL/<br>COLLEGE</th>
+<th rowspan="2">DEGREE</th>
+<th rowspan="2">SPECIA<br>LIZATION</th>
+<th rowspan="2">CGPA (or) %</th>
+</tr>
+<tr>
+<th>FROM</th>
+<th>TO</th>
+</tr>
+
+<tr>
+<td class="tab3"><input type="text" name="from1" placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="to1"placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab3">SSLC</td>
+<td class="tab3"><select name="board1" style="width:100%;" class="int2">
+    <option value="">--Select--</option>
+    <option value="state board">STATE BOARD</option>
+    <option value="central board">CENTRAL BOARD</option>
+  </select></td>
+<td class="tab3"><input type="text" name="sch1" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="degree1" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="spe1" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="cgpa1" style="width:100%;" class="int2"></td>
+</tr>
+
+<tr>
+<td class="tab3"><input type="text" name="from2" placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="to2"placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab3">HSC</td>
+<td class="tab3"><select name="board2" style="width:100%;" class="int2">
+    <option value="">--Select--</option>
+    <option value="state board">STATE BOARD</option>
+    <option value="central board">CENTRAL BOARD</option>
+  </select></td>
+<td class="tab3"><input type="text" name="sch2" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="degree2" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="spe2" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="cgpa2" style="width:100%;" class="int2"></td>
+</tr>
+
+<tr>
+<td class="tab3"><input type="text" name="from3" placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="to3" placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab3">GRADUATION</td>
+<td class="tab3"><select name="board3" style="width:100%;" class="int2">
+    <option value="">--Select--</option>
+    <option value="University">UNIVERSITY</option>
+  </select></td>
+<td class="tab3"><input type="text" name="sch3" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="degree3" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="spe3" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="cgpa3" style="width:100%;" class="int2"></td>
+</tr>
+
+<tr>
+<td class="tab3"><input type="text" name="from4" placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="to4" placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab3">MASTERS/<br>PG</td>
+<td class="tab3"><select name="board4" style="width:100%;" class="int2">
+    <option value="">--Select--</option>
+    <option value="University">UNIVERSITY</option>
+  </select></td>
+<td class="tab3"><input type="text" name="sch4" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="degree4" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="spe4" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="cgpa4" style="width:100%;" class="int2"></td>
+</tr>
+
+<tr>
+<td class="tab3"><input type="text" name="from5" placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="to5" placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab3">DIPLOMA/<br>ITI/OTHERS</td>
+<td class="tab3"><select name="board5" style="width:100%;" class="int2">
+    <option value="">--Select--</option>
+    <option value="University">UNIVERSITY</option>
+  </select></td>
+<td class="tab3"><input type="text" name="sch5" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="degree5" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="spe5" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="cgpa5" style="width:100%;" class="int2"></td>
+</tr>
+</table>
+
+<br>
+<br>
+
+<table class="tabint">
+<tr>
+<td>
+<input type="button" value="Add Row" onclick="addRo('dataTab')" class="sub"/>  
+</td>
+</table> 
+
+<table id="dataTab" class="tabint">  
+<tr>
+<th align="left" colspan="5">INTERNSHIP/TRAINING:</th>
+</tr>
+<tr>
+<th rowspan="2">DELETE ROW</th>
+<th colspan="2">MONTH & YEAR</th>
+<th rowspan="2">NATURE OF TRAINING</th>
+<th rowspan="2">INSTITUTE /<br>ORGANIZATION</th>
+</tr>
+
+<tr>
+<th>FROM</th>
+<th>TO</th>
+</tr>	  
+	  
+<tr> 
+<td><input type="button" name="butto" value="Delete" onclick="removeRo('butto')" style="width:100%;"></td>   
+<td class="tabint"><input type="text" name="ifrom" placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tabint"><input type="text" name="ito"placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tabint"><input type="text" name="itrain" style="width:100%;" placeholder="Nature of Training" class="int2"></td>
+<td class="tabint"><input type="text" name="iinstitute" style="width:100%;" placeholder="Institute/Organization" class="int2"></td>           
+</tr>  
+</table>  
+<br><br>
+
+<table class="tab4">
+<tr>
+<td>
+<input type="button" value="Add Row" onclick="addRow('dataTable')" class="sub"/>  
+</td>
+</table>      
+<table id="dataTable" class="tab4">  
+<tr>
+<th align="left" colspan="5">TRAINING/PROJECTS :</th>
+</tr>
+<tr>
+<th rowspan="2">DELETE ROW</th>
+<th colspan="2">MONTH & YEAR</th>
+<th rowspan="2">NATURE OF TRAINING</th>
+<th rowspan="2">INSTITUTE /<br>ORGANIZATION</th>
+</tr>
+
+<tr>
+<th>FROM</th>
+<th>TO</th>
+</tr>	  
+	  
+<tr> 
+<td><input type="button" name="button1" value="Delete" onclick="removeRow('button1')" style="width:100%;"></td>   
+<td class="tab4"><input type="text" name="tfrom" placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab4"><input type="text" name="tto"placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab4"><input type="text" name="ttrain" style="width:100%;" placeholder="Nature of Training" class="int2"></td>
+<td class="tab4"><input type="text" name="tinstitute" style="width:100%;" placeholder="Institute/Organization" class="int2"></td>           
+</tr>  
+</table>  
+<br><br>
+
+<table class="tab5">
+<tr>
+<td>
+<input type="button" value="Add Row" onclick="addRow1('dataTable1')" class="sub" />  
+</td>
+</table>
+
+<table id="dataTable1" class="tab5">  
+<tr>
+<th align="left" colspan="5">LANGUAGE PROFICIENCY :</th>
+</tr>
+<tr>
+<th>DELETE ROW</th>
+<th>LANGUAGES</th>
+<th>READ</th>
+<th>WRITE</th>
+<th>SPEAK</th>
+</tr>  
+	  
+<tr> 
+<td><input type="button" name="button2" value="Delete" onclick="removeRow1('button2')" style="width:100%;"></td>
+<td class="tab5"><input type="text" name="lan" style="width:100%;" placeholder="Languages" class="int2"></td>    
+<td class="tab5"><input type="checkbox" name="read" style="width:100%;" class="int2"></td>
+<td class="tab5"><input type="checkbox" name="write" style="width:100%;" class="int2"></td>
+<td class="tab5"><input type="checkbox" name="speak" style="width:100%;" class="int2"></td>        
+</tr>  
+</table>  
+
+<br>
+<br>
+<table class="tab6">
+<tr>
+<td>
+<input type="button" value="Add Row" onclick="addRow2('dataTable2')" class="sub"/>  
+</td>
+</table>        
+<table id="dataTable2" class="tab6">  
+<tr>
+<th align="left" colspan="9">EXPERIENCE (START WITH PRESENT JOB):</th>
+</tr>
+
+<tr>
+<th rowspan="2">DELETE ROW</th>
+<th colspan="2">MONTH & YEAR</th>
+<th rowspan="2">NAME OF THE COMPANY</th>
+<th rowspan="2">DESIGNATION</th>
+<th rowspan="2">DEPARTMENT</th>
+<th rowspan="2">TAKEHOME</th>
+<th rowspan="2">GROSS</th>
+<th rowspan="2">CTC</th>
+</tr>
+
+<tr>
+<th>FROM</th>
+<th>TO</th>
+</tr>
+
+<tr>
+<td><input type="button" name="button2" value="Delete" onclick="removeRow2('button2')" style="width:100%;"></td>  
+<td class="tab3"><input type="text" name="efrom" placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="eto"placeholder="MM/YYYY" style="width:100%;" class="int2"></td>
+<td class="tab3"><input type="text" name="ecompany" style="width:100%;" placeholder="Name of the company" class="int2"></td>
+<td class="tab3"><input type="text" name="edesignation" style="width:100%;" placeholder="Designation" class="int2"></td>
+<td class="tab3"><input type="text" name="edepartment" style="width:100%;" placeholder="Department" class="int2"></td>
+<td class="tab3"><input type="text" name="etake" style="width:100%;" placeholder="Take home" class="int2"></td>
+<td class="tab3"><input type="text" name="egross" style="width:100%;" placeholder="Gross" class="int2"></td>
+<td class="tab3"><input type="text" name="ectc" style="width:100%;" placeholder="CTC" class="int2"></td>
+</tr>
+
+</table>
+
+<br>
+<br>
+
+<table class="tab7" cellpadding="6" cellspacing="6">
+<tr>
+<td>Expected Salary (Monthly) :</td>
+<td><input type="text" name="es" placeholder="Expected Salary" class="int2"></td>
+<td>Whether submitted Salary Proofs?</td>
+<td><input type="radio" name="proof" value="Yes"><label for="yes">Yes</label>
+<input type="radio" name="proof" value="No"><label for="no">No</label></td>
+</tr>
+
+<tr>
+<td>1. Had any history of serious injury/major surgery/prolonged illness?</td>
+<td><input type="radio" name="1yes" value="Yes"><label for="yes">Yes</label>
+<input type="radio" name="1yes" value="No"><label for="no">No</label></td>
+
+<td>2. i) Do you own a Two wheeler with a valid driving license?</td>
+<td><input type="radio" name="2yes" value="Yes"><label for="yes">Yes</label>
+<input type="radio" name="2yes" value="No"><label for="no">No</label></td>
+</tr>
+
+<tr>
+<td>3. Are you a PF & ESI contriputor in any of your previous employment?</td>
+<td><input type="radio" name="3yes" value="Yes"><label for="yes">Yes</label>
+<input type="radio" name="3yes" value="No"><label for="no">No</label></td>
+
+<td>ii. Do you own a Four wheeler with a valid driving license?</td>
+<td><input type="radio" name="4yes" value="Yes"><label for="yes">Yes</label>
+<input type="radio" name="4yes" value="No"><label for="no">No</label></td>
+</tr>
+
+<tr>
+<td>UAN NO :</td>
+<td><input type="text" name="uan" placeholder="UAN NO" class="int2"></td>
+<td>4. Have working knowledge in computer - MS excel/word/powerpoint?</td>
+<td><input type="radio" name="5yes" value="Yes"><label for="yes">Yes</label>
+<input type="radio" name="5yes" value="No"><label for="no">No</label></td>
+</tr>
+
+<tr>
+<td>ESI NO :</td>
+<td colspan="3"><input type="text" name="esi" placeholder="ESI NO" class="int2"></td>
+</tr>
+</table> 
+
+<br><br>
+
+<table class="tab8" cellpadding="6" cellspacing="6">
+<tr>
+<th>S.NO</th>
+<th>ID PROOF</th>
+<th>ATTACHMENT</th>
+</tr>
+
+<tr>
+<td class="tab8">1.</td>
+<td class="tab8">AADHAR CARD</td>
+<td class="tab8"><input type="file" id="aadhar" required></td>
+</tr>
+
+<tr>
+<td class="tab8">2.</td>
+<td class="tab8">PASSPORT</td>
+<td class="tab8"><input type="file" name="passport" ></td>
+</tr>
+
+<tr>
+<td class="tab8">3.</td>
+<td class="tab8">PAN</td>
+<td class="tab8"><input type="file" name="pan" ></td>
+</tr>
+
+<tr>
+<td class="tab8">4.</td>
+<td class="tab8">VOTER ID</td>
+<td class="tab8"><input type="file" name="voterid"></td>
+</tr>
+
+<tr>
+<td class="tab8">5.</td>
+<td class="tab8">RATION CARD</td>
+<td class="tab8"><input type="file" name="ration"></td>
+</tr>
+
+<tr>
+<td class="tab8">6.</td>
+<td class="tab8">DRIVING LICENSE</td>
+<td class="tab8"><input type="file" name="driving"></td>
+</tr>
+
+<tr>
+<td class="tab8">7.</td>
+<td class="tab8">BIRTH CERTIFICATE</td>
+<td class="tab8"><input type="file" name="birth"></td>
+</tr>
+
+</table>
+
+<br><br>
+<table class="tab9" cellpadding="6" cellspacing="6">
+<tr>
+<th colspan="4">DECLARATION :</th>
+</tr>
+
+<tr>
+<td colspan="4">I hereby declare that the particlars furnished above are correct to the best of my knowledge and if any found wrong in future, I will abide by the decision taken by the Management. I hereby authorise you to deduct PF, ESI, Professional Tax, Income Tax, LWF as per act in place from time to time.</td>
+</tr>
+
+<tr>
+<td colspan="2">Place :
+<input type="text" name="place" placeholder="Place" class="int2"></td>
+<td colspan="2"><input type="file" name="sig1" style="height:50px;"></td>
+</tr>
+
+<tr>
+<td colspan="2">Date :
+<input type="date" name="date1" class="int2"></td>
+<td colspan="2">Signature of the Applicant</td>
+</tr>
+</table>
+<br><br>
+<input type="submit" value="Submit Application" name="btn" id="btn" class="btn-grad">
+</center>
+</form>
+</body>
+</html>

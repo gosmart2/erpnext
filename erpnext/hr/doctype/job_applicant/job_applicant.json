@@ -1,0 +1,329 @@
+{
+ "allow_rename": 1,
+ "autoname": "HR-APP-.YYYY.-.#####",
+ "creation": "2013-01-29 19:25:37",
+ "description": "Applicant for a Job",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "applicant_photo",
+  "applicant_post",
+  "applicant_name",
+  "email_id",
+  "father_name",
+  "occupation",
+  "date_of_birth",
+  "age",
+  "gender",
+  "column_break_3",
+  "blood_group",
+  "religion",
+  "community",
+  "marital_status",
+  "spouse_name",
+  "place_of_birth",
+  "section_break_6",
+  "present_address",
+  "permanant_address",
+  "guardian",
+  "internship_training",
+  "education",
+  "training_project",
+  "language_proficiency",
+  "experience",
+  "status",
+  "job_title",
+  "source",
+  "source_name",
+  "cover_letter",
+  "resume_attachment",
+  "expected_salary",
+  "qus",
+  "qus1",
+  "qus2",
+  "qus3",
+  "qus4",
+  "qus5",
+  "uan_no",
+  "esi_no",
+  "attachments",
+  "place",
+  "date",
+  "signature"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Applicant Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Open\nReplied\nRejected\nHold\nAccepted"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Opening",
+   "options": "Job Opening"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Link",
+   "label": "Source",
+   "options": "Job Applicant Source"
+  },
+  {
+   "depends_on": "eval: doc.source==\"Employee Referral\" ",
+   "fieldname": "source_name",
+   "fieldtype": "Link",
+   "label": "Source Name",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cover_letter",
+   "fieldtype": "Text",
+   "label": "Cover Letter"
+  },
+  {
+   "fieldname": "resume_attachment",
+   "fieldtype": "Attach",
+   "label": "Resume Attachment"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email id"
+  },
+  {
+   "fieldname": "applicant_post",
+   "fieldtype": "Select",
+   "label": "Applicant post",
+   "options": "\nGRADUATE ENGINEER TRAINEE\nLAB CHEMIST\nRO OPERATOR\nSTP OPERATOR\nETP OPERATOR\nMECHANICAL JUNIOR MAINTENANCE\nMECHANICAL SENIOR MAINTENANCE\nELECTRICAL JUNIOR MAINTENANCE\nELECTRICAL SENIOR MAINTENANCE\nFITTER\nWELDER\nSHIFT IN CHARGE\nPROJECT ENGINEER\nMECHANICAL DESIGN ENGINEER\nELECTRICAL DESIGN ENGINEER\nO&M IN CHARGE\nSALES EXECUTIVE\nTELEMARKETING EXECUTIVE\nSOFTWARE DEVELOPER\nOTHERS"
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "label": "Father Name"
+  },
+  {
+   "fieldname": "occupation",
+   "fieldtype": "Data",
+   "label": "Occupation"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of birth"
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMALE\nFEMALE"
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood Group",
+   "options": "\nA+\nA-\nB+\nB-\nO+\nO-\nAB+\nAB-"
+  },
+  {
+   "fieldname": "religion",
+   "fieldtype": "Select",
+   "label": "Religion",
+   "options": "\nHINDU\nMUSLIM\nCHRISTIAN"
+  },
+  {
+   "fieldname": "community",
+   "fieldtype": "Select",
+   "label": "Community",
+   "options": "\nBC\nMBC\nSC\nST\nBCM\nOTHERS"
+  },
+  {
+   "fieldname": "marital_status",
+   "fieldtype": "Select",
+   "label": "Marital status",
+   "options": "\nSINGLE\nMARRIED"
+  },
+  {
+   "fieldname": "spouse_name",
+   "fieldtype": "Data",
+   "label": "Spouse name"
+  },
+  {
+   "fieldname": "place_of_birth",
+   "fieldtype": "Data",
+   "label": "Place of birth"
+  },
+  {
+   "fieldname": "present_address",
+   "fieldtype": "Long Text",
+   "label": "Present Address"
+  },
+  {
+   "fieldname": "permanant_address",
+   "fieldtype": "Long Text",
+   "label": "Permanant Address"
+  },
+  {
+   "fieldname": "internship_training",
+   "fieldtype": "Table",
+   "label": "Internship training",
+   "options": "Internship"
+  },
+  {
+   "fieldname": "education",
+   "fieldtype": "Table",
+   "label": "Education",
+   "options": "Edu"
+  },
+  {
+   "fieldname": "training_project",
+   "fieldtype": "Table",
+   "label": "Training & Project",
+   "options": "Training and Project"
+  },
+  {
+   "fieldname": "expected_salary",
+   "fieldtype": "Data",
+   "label": "Expected Salary"
+  },
+  {
+   "fieldname": "qus",
+   "fieldtype": "Select",
+   "label": "Whether submitted Salary Proofs?",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "qus1",
+   "fieldtype": "Select",
+   "label": "Had any history of serious injury/major surgery/prolonged illness?",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "qus2",
+   "fieldtype": "Select",
+   "label": "Do you own a Two wheeler with a valid driving license?",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "qus3",
+   "fieldtype": "Select",
+   "label": " Do you own a Four wheeler with a valid driving license?",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "qus4",
+   "fieldtype": "Select",
+   "label": "Are you a PF & ESI contriputor in any of your previous employment?",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "qus5",
+   "fieldtype": "Select",
+   "label": "Have working knowledge in computer - MS excel/word/powerpoint?",
+   "options": "\nYES\nNO"
+  },
+  {
+   "fieldname": "uan_no",
+   "fieldtype": "Data",
+   "label": "UAN NO"
+  },
+  {
+   "fieldname": "esi_no",
+   "fieldtype": "Data",
+   "label": "ESI NO"
+  },
+  {
+   "fieldname": "place",
+   "fieldtype": "Data",
+   "label": "Place"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Attach Image",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Attach"
+  },
+  {
+   "fieldname": "applicant_photo",
+   "fieldtype": "Attach Image",
+   "label": "Applicant_Photo"
+  },
+  {
+   "fieldname": "guardian",
+   "fieldtype": "Table",
+   "label": "Guardian",
+   "options": "Parents"
+  },
+  {
+   "fieldname": "language_proficiency",
+   "fieldtype": "Table",
+   "label": "Language",
+   "options": "Lan"
+  },
+  {
+   "fieldname": "experience",
+   "fieldtype": "Table",
+   "label": "Experiance",
+   "options": "Exp"
+  }
+ ],
+ "icon": "fa fa-user",
+ "idx": 1,
+ "modified": "2020-12-08 12:33:43.414297",
+ "modified_by": "gokul@wtt.com",
+ "module": "HR",
+ "name": "Job Applicant",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "applicant_name",
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "title_field": "applicant_name"
+}
